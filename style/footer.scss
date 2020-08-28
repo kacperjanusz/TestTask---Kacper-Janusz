@@ -1,0 +1,29 @@
+footer {
+  display: flex;
+  justify-content: center;
+  height: 25vh;
+  width: 100vw;
+  color: theme-color-level(primary-light);
+  @media screen and (min-width: 401px) and (max-width: 1140px) {
+    height: 17vh;
+  }
+  @media screen and (max-device-width: 400px) {
+    height: 12vh;
+  }
+
+  app-footer {
+    height: 100%;
+    width: 100%;
+    background-color: theme-color-level(primary-darker);
+    display: flex;
+    .footerContainer {
+      max-width: 100%;
+      margin: 2.5rem;
+    }
+    .spacer {
+      @media screen and (max-width: 1140px) {
+        display: none;
+      }
+    }
+  }
+}
