@@ -1,0 +1,131 @@
+.modal-dialog {
+  min-height: 70vh;
+  @media screen and (min-width: 401px) and (max-width: 1140px) {
+    max-height: 80vh;
+    max-width: 80vw;
+  }
+  @media screen and (max-device-width: 400px) {
+    max-height: 95vh;
+    max-width: 95vw;
+  }
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    max-width: 25vw;
+    max-height: 50vh;
+    border-radius: 3px;
+
+    @media screen and (min-width: 401px) and (max-width: 1140px) {
+      max-height: 80vh;
+      max-width: 80vw;
+    }
+    @media screen and (max-device-width: 400px) {
+      max-height: 95vh;
+      max-width: 95vw;
+    }
+
+    .modal-header {
+      background-color: theme-color-level(primary);
+      height: 15%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      color: theme-color-level(primary-darker);
+      border-bottom: none;
+      .top {
+        height: 15%;
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        background-color: theme-color-level(primary);
+        #closeButton {
+          box-sizing: border-box;
+          height: 30px;
+          width: 30px;
+          display: flex;
+          margin: 3px;
+          align-items: center;
+          justify-content: center;
+          color: theme-color-level(primary-darker);
+          background-color: theme-color-level(primary-lighter);
+          border-radius: 100%;
+          span {
+            padding-bottom: 3px;
+          }
+        }
+      }
+      .header-text {
+        width: 100%;
+        margin-left: 10px;
+        p {
+          max-height: 11px;
+          margin-left: 0.5rem;
+        }
+      }
+    }
+    .modal-body {
+      background-color: theme-color-level(primary-lighter);
+      height: 70%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .row {
+        box-sizing: border-box;
+
+        display: flex;
+        align-items: center;
+        .col-btn {
+          height: 6rem;
+          max-width: 5rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .buttonWrapper {
+          box-sizing: border-box;
+          width: 80%;
+          height: 40%;
+          border: 2px solid;
+          border-color: #b4b4bc;
+          border-radius: 10px;
+          color: #b4b4bc;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          padding: 0px;
+          margin: 0px;
+        }
+        .buttonWrapper:focus {
+          border-color: yellow;
+        }
+        .picture {
+          width: auto;
+          height: auto;
+          padding: 0px;
+          margin: 0px;
+        }
+      }
+    }
+    .modal-footer {
+      background-color: theme-color-level(primary-lighter);
+      height: 10%;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      padding: 10px;
+      padding-bottom: 15px;
+      border-top: none;
+      #authorLabel {
+        box-sizing: border-box;
+        padding: 5px;
+        color: theme-color-level(primary-darker);
+        border: 2px solid;
+        border-color: theme-color-level(primary);
+        border-radius: 5px;
+      }
+    }
+  }
+}
